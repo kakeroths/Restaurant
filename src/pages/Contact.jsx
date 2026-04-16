@@ -18,7 +18,7 @@ export default function Contact() {
 
       <div className="max-w-5xl mx-auto px-6 py-16">
         {/* Drop us a line */}
-        <div className="bg-white rounded-2xl shadow-sm p-10 mb-10">
+        <div className="bg-white rounded-2xl shadow-sm p-6 md:p-10 mb-10">
           <p className="text-amber-500 uppercase tracking-widest text-sm text-center mb-2">Get In Touch</p>
           <h2 className="text-3xl font-bold text-stone-800 text-center mb-8">Drop Us A Line</h2>
           <ContactForm />

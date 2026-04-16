@@ -17,8 +17,8 @@ export default function Chefs() {
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {chefs.map(c => (
             <div key={c.name} className="text-center group">
-              <div className="relative overflow-hidden rounded-full w-40 h-40 mx-auto mb-4 border-4 border-amber-100 group-hover:border-amber-400 transition">
-                <img src={c.img} alt={c.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="relative overflow-hidden rounded-full w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 border-4 border-amber-100 group-hover:border-amber-400 transition">
+                <img src={c.img} alt={c.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
               </div>
               <h3 className="font-bold text-stone-800 text-lg">{c.name}</h3>
               <p className="text-amber-500 text-sm">{c.role}</p>

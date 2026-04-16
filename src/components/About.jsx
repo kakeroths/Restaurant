@@ -2,12 +2,12 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-        {/* Image grid */}
+        {/* Image grid — stacks on mobile */}
         <div className="grid grid-cols-2 gap-4">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" alt="Restaurant" className="rounded-2xl h-48 w-full object-cover" />
-          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400" alt="Chef" className="rounded-2xl h-48 w-full object-cover mt-8" />
-          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Dining" className="rounded-2xl h-48 w-full object-cover" />
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" alt="Food" className="rounded-2xl h-48 w-full object-cover mt-8" />
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" alt="Restaurant" className="rounded-2xl h-36 sm:h-48 w-full object-cover" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400" alt="Chef" className="rounded-2xl h-36 sm:h-48 w-full object-cover mt-6 sm:mt-8" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Dining" className="rounded-2xl h-36 sm:h-48 w-full object-cover" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" alt="Food" className="rounded-2xl h-36 sm:h-48 w-full object-cover mt-6 sm:mt-8" loading="lazy" />
         </div>
 
         {/* Text */}
@@ -15,7 +15,7 @@ export default function About() {
           <p className="text-amber-500 uppercase tracking-widest text-sm mb-2 flex items-center gap-2">
             <span className="w-8 h-px bg-amber-500 inline-block" /> About Us
           </p>
-          <h2 className="text-4xl font-bold text-stone-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
             Welcome to 🍽️ <span className="text-amber-500">Bella Vista</span>
           </h2>
           <p className="text-gray-500 mb-4 leading-relaxed">

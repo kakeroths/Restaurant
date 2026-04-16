@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-stone-900 text-gray-400">
-      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
+      <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
         <div>
           <h3 className="text-amber-400 text-xl font-bold mb-4">🍽️ Bella Vista</h3>
           <p className="text-sm leading-relaxed mb-4">Authentic Italian cuisine crafted with passion and the finest ingredients since 2005.</p>

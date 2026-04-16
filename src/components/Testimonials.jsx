@@ -13,13 +13,13 @@ export default function Testimonials() {
         </p>
         <h2 className="text-4xl font-bold text-center mb-12">Our Clients Say!!!</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {reviews.map((r, i) => (
-            <div key={r.name} className={`p-8 rounded-2xl relative ${i === 1 ? 'bg-amber-500 text-black' : 'bg-stone-800'}`}>
+            <div key={r.name} className={`p-6 md:p-8 rounded-2xl relative ${i === 1 ? 'bg-amber-500 text-black' : 'bg-stone-800'}`}>
               <div className={`text-6xl font-serif leading-none mb-4 ${i === 1 ? 'text-black/20' : 'text-amber-500/30'}`}>"</div>
               <p className={`leading-relaxed mb-6 text-sm ${i === 1 ? 'text-black/80' : 'text-gray-400'}`}>{r.text}</p>
               <div className="flex items-center gap-3">
-                <img src={r.img} alt={r.name} className="w-12 h-12 rounded-full object-cover" />
+                <img src={r.img} alt={r.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" />
                 <div>
                   <p className="font-bold">{r.name}</p>
                   <p className={`text-sm ${i === 1 ? 'text-black/60' : 'text-gray-500'}`}>{r.role}</p>

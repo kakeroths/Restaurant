@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { collection, addDoc, Timestamp } from 'firebase/firestore'
 import { db } from '../firebase'
 
@@ -6,7 +6,7 @@ export default function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState('')
 
-  const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
+  const handleChange = useCallback(e => setForm(prev => ({ ...prev, [e.target.name]: e.target.value })), [])
 
   const handleSubmit = async e => {
     e.preventDefault()

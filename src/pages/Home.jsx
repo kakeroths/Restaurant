@@ -24,12 +24,18 @@ export default function Home() {
           </p>
           <h2 className="text-4xl font-bold text-stone-800 text-center mb-4">Most Popular Items</h2>
 
-          {/* Category tabs */}
-          <div className="flex justify-center gap-6 mb-10 flex-wrap">
+          {/* Category tabs — link to Menu page */}
+          <div className="flex justify-center gap-4 sm:gap-6 mb-10 flex-wrap">
             {['Popular', 'Breakfast', 'Lunch', 'Dinner'].map((cat, i) => (
-              <span key={cat} className={`flex items-center gap-2 font-medium cursor-pointer pb-1 ${i === 0 ? 'text-amber-500 border-b-2 border-amber-500' : 'text-gray-500 hover:text-amber-500 transition'}`}>
+              <Link
+                key={cat}
+                to="/menu"
+                className={`flex items-center gap-2 font-medium pb-1 transition ${
+                  i === 0 ? 'text-amber-500 border-b-2 border-amber-500' : 'text-gray-500 hover:text-amber-500'
+                }`}
+              >
                 {['🍽️','🥞','🥗','🌙'][i]} {cat}
-              </span>
+              </Link>
             ))}
           </div>
 
@@ -48,11 +54,12 @@ export default function Home() {
       {/* Booking + Image split */}
       <section className="py-20 bg-stone-800">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+          <div className="relative hidden md:block">
             <img
               src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800"
               alt="Dining"
               className="rounded-2xl w-full h-96 object-cover"
+              loading="lazy"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-2xl cursor-pointer hover:scale-110 transition shadow-xl">▶</div>

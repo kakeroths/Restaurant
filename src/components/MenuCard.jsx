@@ -40,7 +40,7 @@ export const menuData = [
 export default function MenuCard({ name, desc, price, img }) {
   return (
     <div className="flex items-center gap-4 p-4 border-b border-gray-100 hover:bg-amber-50 transition group">
-      <img src={img} alt={name} className="w-20 h-20 rounded-xl object-cover shrink-0 group-hover:scale-105 transition-transform" />
+      <img src={img} alt={name} className="w-20 h-20 rounded-xl object-cover shrink-0 group-hover:scale-105 transition-transform" loading="lazy" />
       <div className="flex-1 min-w-0">
         <h3 className="font-bold text-stone-800 text-base">{name}</h3>
         <p className="text-gray-500 text-sm mt-1 truncate">{desc}</p>
